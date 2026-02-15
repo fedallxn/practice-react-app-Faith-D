@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import ProfileCard from './components/ProfileCard'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const profileCards = [
+  {
+    id: 1,
+    name: "Nick",
+    age: 29,
+    hobby: "cycling",
+    bio: "Just a stay-at-home cat dad who loves to bike!"
+  },
+  {
+    id: 2,
+    name: "Faith",
+    age: 28,
+    hobby: "video games",
+    bio: "A developer excited for the opportunities ahead!"
+  },
+  {
+    id: 3,
+    name: "Mouse",
+    age: 4,
+    hobby: "killing mice",
+    bio: "Orange cat. Enough said."
+  },
+  {
+    id: 4,
+    name: "Zelda",
+    age: 1,
+    hobby: "begging for food",
+    bio: "The sweetest angel baby princess kitty with gluttonous tendencies."
+  }
+];
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        /*Eventually the index will be removed, this was just to show that the Profile Card works*/
+        <ProfileCard profile={profileCards[1]}/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
-
-export default App
+export default App;
