@@ -6,14 +6,14 @@ function App() {
   {
     id: 1,
     name: "Nick",
-    age: 29,
+    age: 28,
     hobby: "cycling",
     bio: "Just a stay-at-home cat dad who loves to bike!"
   },
   {
     id: 2,
     name: "Faith",
-    age: 28,
+    age: 27,
     hobby: "video games",
     bio: "A developer excited for the opportunities ahead!"
   },
@@ -34,6 +34,7 @@ function App() {
 ];
   return (
     <>
+    <h1>User Profiles:</h1>
       <div>
         <DisplayProfiles profiles={profileCards}/>
       </div>
