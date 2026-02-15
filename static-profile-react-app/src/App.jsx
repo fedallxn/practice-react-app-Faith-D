@@ -1,5 +1,5 @@
 import './App.css'
-import ProfileCard from './components/ProfileCard'
+import DisplayProfiles from './components/ProfileContainer';
 
 function App() {
   const profileCards = [
@@ -35,8 +35,7 @@ function App() {
   return (
     <>
       <div>
-        /*Eventually the index will be removed, this was just to show that the Profile Card works*/
-        <ProfileCard profile={profileCards[1]}/>
+        <DisplayProfiles profiles={profileCards}/>
       </div>
     </>
   )
